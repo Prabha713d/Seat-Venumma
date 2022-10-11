@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 
+//Button design
+
 class Buttons extends StatelessWidget {
+  //selectHandler is what is run when the button is pressed, which links all the way to the home page.
   final Function selectHandler;
   final String buildingName;
 

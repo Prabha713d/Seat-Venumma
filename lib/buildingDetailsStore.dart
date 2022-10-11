@@ -1,3 +1,5 @@
+//the class currently storing the data.
+
 class BuildingDetailsStore {
   final details = [
     {
@@ -99,6 +101,9 @@ class BuildingDetailsStore {
     }
     return -1;
   }
+
+  //when an object is created to this class, a bunch of lists are intialized.
+  //ideally when the backend is constructed, this code should read from there and generate the same lists.
 
   BuildingDetailsStore() {
     for (int i = 0; i < details.length; i++) {

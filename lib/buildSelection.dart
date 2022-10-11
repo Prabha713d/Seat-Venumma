@@ -7,6 +7,8 @@ import './buttons.dart';
 import "./buildingDetails.dart";
 import './location.dart';
 
+//this code generates the layout of the buttons - currently set to grid view.
+
 class BuildSelection extends StatelessWidget {
   //final String page;
   final Function buttonClicked;
@@ -31,6 +33,7 @@ class BuildSelection extends StatelessWidget {
         //Locations(
         //page,
         //),
+        //generating the list of buttons, then calling Buttons to create them, while passing building/room name - reusing code for both
         ...(buildList).map((bldg) {
           return Buttons(buttonClicked, bldg);
         }).toList()
