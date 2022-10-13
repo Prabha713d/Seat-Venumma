@@ -54,6 +54,7 @@ class MyAppState extends State<MyApp> {
       home: Scaffold(
         //creates and appbar on top, with two buttons and the page heading
         appBar: AppBar(
+          backgroundColor: Color.fromARGB(255, 4, 62, 68),
           actions: <Widget>[
             HomeButton(
               buttonClicked: _buttonClicked,

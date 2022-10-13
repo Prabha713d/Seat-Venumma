@@ -12,19 +12,26 @@ class Buttons extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      margin: EdgeInsets.all(10),
+      margin: EdgeInsets.all(5),
       child: ElevatedButton(
-        style: ButtonStyle(
-          backgroundColor:
-              MaterialStateProperty.all(Color.fromARGB(255, 12, 139, 153)),
-          foregroundColor:
-              MaterialStateProperty.all(Color.fromARGB(255, 244, 246, 247)),
+        style: ElevatedButton.styleFrom(
+          backgroundColor: Color.fromARGB(255, 12, 139, 153),
+          foregroundColor: Color.fromARGB(255, 244, 246, 247),
+          shape: BeveledRectangleBorder(
+            borderRadius: BorderRadius.all(Radius.circular(5)),
+          ),
+          side: BorderSide(
+            color: Color.fromARGB(255, 4, 60, 66),
+            width: 1,
+          ),
         ),
         onPressed: () => selectHandler(buildingName),
         child: Text(
           buildingName,
+          textAlign: TextAlign.center,
           style: TextStyle(
-            fontFamily: 'Anton',
+            fontFamily: 'Antonio',
+            fontSize: 15,
           ),
         ),
       ),

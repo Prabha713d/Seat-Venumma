@@ -25,9 +25,9 @@ class BuildSelection extends StatelessWidget {
     BuildingDetails obj = BuildingDetails();
     return GridView.count(
       primary: false,
-      padding: const EdgeInsets.all(20),
-      crossAxisSpacing: 10,
-      mainAxisSpacing: 10,
+      padding: const EdgeInsets.all(5),
+      crossAxisSpacing: 5,
+      mainAxisSpacing: 5,
       crossAxisCount: 3,
       children: [
         //Locations(
