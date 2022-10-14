@@ -3,6 +3,7 @@ import 'package:flutter/src/widgets/framework.dart';
 
 import 'package:flutter/material.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
+import 'package:testapp/roomFeatures.dart';
 
 import 'vacancyUpdateForm.dart';
 import 'vacancyIndicator.dart';
@@ -46,6 +47,13 @@ class _VacancyTrackState extends State<VacancyTrack> {
           child: Card(
             elevation: 5,
             child: RoomDescription(timeUpdated: widget.roomDetails[2]),
+          ),
+        ),
+        Padding(
+          padding: EdgeInsets.fromLTRB(10, 5, 10, 5),
+          child: Card(
+            elevation: 5,
+            child: RoomFeatures(features: widget.roomDetails[3]),
           ),
         ),
         Divider(
