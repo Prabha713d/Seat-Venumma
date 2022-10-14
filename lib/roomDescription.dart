@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 
 class RoomDescription extends StatelessWidget {
   @override
-  final String timeUpdated;
+  final DateTime timeUpdated;
 
   RoomDescription({
     required this.timeUpdated,
@@ -17,11 +17,13 @@ class RoomDescription extends StatelessWidget {
       margin: EdgeInsets.all(10),
       alignment: Alignment.topCenter,
       child: Text(
-        ("Last Update at " + timeUpdated),
+        ("Last Update at " +
+            (timeUpdated.hour * 100 + timeUpdated.minute).toString() +
+            "hrs"),
         textAlign: TextAlign.start,
         style: TextStyle(
           fontWeight: FontWeight.w500,
-          fontSize: 15.0,
+          fontSize: 20.0,
           fontFamily: 'Galliard BT',
         ),
       ),

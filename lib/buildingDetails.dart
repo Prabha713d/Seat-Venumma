@@ -1,72 +1,83 @@
-class BuildingDetails {
-  final buildings = {
-    'Seat Venumma': [
-      'ESB',
-      'CRC',
-      'HSB',
-      'NAC',
-      'Library',
-      'RJN',
-      'RMN',
-    ],
-    'Category Page': [
+var details = [
+  {
+    'Name': 'Electrical Sciences Block',
+    'Rooms': {
+      'Foyer': [10, 100, DateTime.parse('1969-07-20 20:18:04Z')],
+      'Food Court': [10, 100, DateTime.parse('1969-07-20 20:18:04Z')],
+      'Gazebo': [10, 100, DateTime.parse('1969-07-20 20:18:04Z')],
+    },
+    'Usage': [
       'Study',
       'Meetings',
+    ],
+  },
+  {
+    'Name': 'Classroom Complex',
+    'Rooms': {
+      'CRC101': [10, 100, DateTime.parse('1969-07-20 20:18:04Z')],
+      'CRC102': [10, 100, DateTime.parse('1969-07-20 20:18:04Z')],
+      'CRC103': [10, 100, DateTime.parse('1969-07-20 20:18:04Z')],
+      'CRC201': [10, 100, DateTime.parse('1969-07-20 20:18:04Z')],
+      'CRC202': [10, 100, DateTime.parse('1969-07-20 20:18:04Z')],
+      'CRC203': [10, 100, DateTime.parse('1969-07-20 20:18:04Z')],
+    },
+    'Usage': [
+      'Study',
       'Events',
     ],
-    'ESB': [
-      'Foyer',
-      'Gazebo',
-      'Food Court',
+  },
+  {
+    'Name': 'Humanity Sciences Block',
+    'Rooms': {
+      'Gandhi Hall': [10, 100, DateTime.parse('1969-07-20 20:18:04Z')],
+      'Central Lecture Theatre': [
+        10,
+        100,
+        DateTime.parse('1969-07-20 20:18:04Z')
+      ],
+      'HSB133': [10, 100, DateTime.parse('1969-07-20 20:18:04Z')],
+    },
+    'Usage': [
+      'Events',
+      'Meetings',
     ],
-    'HSB': [
-      'HSB133',
-      'Gandhi Hall',
-      'CLT',
+  },
+  {
+    'Name': 'Ramanujan Block',
+    'Rooms': {
+      'RJN101': [10, 100, DateTime.parse('1969-07-20 20:18:04Z')],
+      'RJN102': [10, 100, DateTime.parse('1969-07-20 20:18:04Z')],
+      'RJN201': [10, 100, DateTime.parse('1969-07-20 20:18:04Z')],
+      'RJN202': [10, 100, DateTime.parse('1969-07-20 20:18:04Z')],
+    },
+    'Usage': [
+      'Events',
+      'Meetings',
     ],
-    'NAC': [
-      'Garage',
-      'NAC314',
-      'CDC',
+  },
+  {
+    'Name': 'Raman Block',
+    'Rooms': {
+      'RMN101': [10, 100, DateTime.parse('1969-07-20 20:18:04Z')],
+      'RMN102': [10, 100, DateTime.parse('1969-07-20 20:18:04Z')],
+      'RMN201': [10, 100, DateTime.parse('1969-07-20 20:18:04Z')],
+      'RMN202': [10, 100, DateTime.parse('1969-07-20 20:18:04Z')],
+    },
+    'Usage': [
+      'Events',
+      'Meetings',
     ],
-    'Library': [
-      'Thrid Floor',
-      'Second Floor',
-      'First Floor',
+  },
+  {
+    'Name': 'Central Library',
+    'Rooms': {
+      'Ground Floor': [10, 100, DateTime.parse('1969-07-20 20:18:04Z')],
+      'First Floor': [10, 100, DateTime.parse('1969-07-20 20:18:04Z')],
+      'Second Floor': [10, 100, DateTime.parse('1969-07-20 20:18:04Z')],
+      'Third Floor': [10, 100, DateTime.parse('1969-07-20 20:18:04Z')],
+    },
+    'Usage': [
+      'Study',
     ],
-    'CRC': [
-      'CRC101',
-      'CRC102',
-      'CRC103',
-    ],
-    'RMN': [
-      'RMN101',
-      'RMN102',
-      'RMN201',
-      'RMN202',
-    ],
-    'RJN': [
-      'RJN101',
-      'RJN102',
-      'RJN201',
-      'RJN202',
-    ],
-    'Study': [
-      'ESB',
-      'CRC',
-      'Library',
-      'NAC',
-    ],
-    'Meetings': [
-      'ESB',
-      'RJN',
-      'RMN',
-    ],
-    'Events': [
-      'CRC',
-      'HSB',
-      'RJN',
-      'RMN',
-    ],
-  };
-}
+  },
+];

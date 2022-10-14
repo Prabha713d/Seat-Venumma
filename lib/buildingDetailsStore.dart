@@ -1,7 +1,11 @@
 //the class currently storing the data.
 
+import 'package:flutter/material.dart';
+
+import 'buildingDetails.dart' as bd;
+
 class BuildingDetailsStore {
-  final details = [
+  var details = [
     {
       'Name': 'Electrical Sciences Block',
       'Rooms': {
@@ -94,8 +98,8 @@ class BuildingDetailsStore {
   }
 
   int indexFinder(var needle) {
-    for (int i = 0; i < details.length; i++) {
-      if (details[i]['Name'] == needle) {
+    for (int i = 0; i < bd.details.length; i++) {
+      if (bd.details[i]['Name'] == needle) {
         return i;
       }
     }
@@ -113,21 +117,40 @@ class BuildingDetailsStore {
   }
 
   List roomDetailSearcher(String roomName) {
-    for (int i = 0; i < details.length; i++) {
-      if (inMap(details[i]['Rooms'] as Map, roomName).isNotEmpty) {
-        return (inMap(details[i]['Rooms'] as Map, roomName));
+    for (int i = 0; i < bd.details.length; i++) {
+      if (inMap(bd.details[i]['Rooms'] as Map, roomName).isNotEmpty) {
+        print(inMap(bd.details[i]['Rooms'] as Map, roomName));
+        return (inMap(bd.details[i]['Rooms'] as Map, roomName));
       }
     }
 
     return [];
   }
+
+  void vacancyUpdate(String roomName, int newVacancy) {
+    print("reached" + roomName);
+    for (int i = 0; i < bd.details.length; i++) {
+      List reader = inMap(bd.details[i]['Rooms'] as Map, roomName);
+      print(reader);
+      if (reader.isNotEmpty) {
+        print("found");
+        if (newVacancy <= reader[1]) {
+          var temp = bd.details[i]['Rooms'] as Map;
+          temp[roomName][0] = newVacancy;
+          temp[roomName][2] = DateTime.now();
+          print(temp);
+          bd.details[i]['Rooms'] = temp;
+        }
+      }
+    }
+  }
   //when an object is created to this class, a bunch of lists are intialized.
   //ideally when the backend is constructed, this code should read from there and generate the same lists.
 
   BuildingDetailsStore() {
-    for (int i = 0; i < details.length; i++) {
-      var buildName = details[i]['Name'];
-      List buildUsage = details[i]['Usage'] as List;
+    for (int i = 0; i < bd.details.length; i++) {
+      var buildName = bd.details[i]['Name'];
+      List buildUsage = bd.details[i]['Usage'] as List;
 
       //adding to overall list of building names
       buildings.add(buildName as String);
