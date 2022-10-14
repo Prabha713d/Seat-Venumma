@@ -9,7 +9,7 @@ import 'vacancyIndicator.dart';
 import 'roomDescription.dart';
 import 'page.dart' as pg;
 
-class VacancyTrack extends StatelessWidget {
+class VacancyTrack extends StatefulWidget {
   //final String page;
   final List roomDetails;
   final String page;
@@ -21,22 +21,31 @@ class VacancyTrack extends StatelessWidget {
   });
 
   @override
+  State<VacancyTrack> createState() => _VacancyTrackState();
+}
+
+class _VacancyTrackState extends State<VacancyTrack> {
+  void reload() {
+    setState(() {});
+  }
+
+  @override
   Widget build(BuildContext context) {
-    pg.page = page;
+    pg.page = widget.page;
     return Column(
       children: [
         Padding(
           padding: EdgeInsets.fromLTRB(10, 10, 10, 5),
           child: Card(
             elevation: 5,
-            child: VacancyIndicator(roomDetails),
+            child: VacancyIndicator(widget.roomDetails),
           ),
         ),
         Padding(
           padding: EdgeInsets.fromLTRB(10, 5, 10, 5),
           child: Card(
             elevation: 5,
-            child: RoomDescription(timeUpdated: roomDetails[2]),
+            child: RoomDescription(timeUpdated: widget.roomDetails[2]),
           ),
         ),
         Divider(
@@ -45,7 +54,7 @@ class VacancyTrack extends StatelessWidget {
           thickness: 3,
           color: Color.fromARGB(255, 73, 105, 109),
         ),
-        VacancyUpdateForm(),
+        VacancyUpdateForm(reload: reload),
         Divider(
           indent: 12,
           endIndent: 12,

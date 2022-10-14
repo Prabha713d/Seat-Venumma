@@ -7,7 +7,8 @@ import 'page.dart' as pg;
 
 // Define a custom Form widget.
 class VacancyUpdateForm extends StatefulWidget {
-  const VacancyUpdateForm({super.key});
+  final Function reload;
+  const VacancyUpdateForm({required this.reload, super.key});
 
   @override
   VUFState createState() {
@@ -30,11 +31,8 @@ class VUFState extends State<VacancyUpdateForm> {
     setState(() {
       BuildingDetailsStore obj = new BuildingDetailsStore();
       obj.vacancyUpdate(pg.page, int.parse(newVacancy));
+      widget.reload();
     });
-  }
-
-  void reload() {
-    setState(() {});
   }
 
   @override
@@ -64,7 +62,6 @@ class VUFState extends State<VacancyUpdateForm> {
               ),
             ),
           ),
-          ReloadVacancy(reload: reload),
         ],
       ),
     );
