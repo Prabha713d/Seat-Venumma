@@ -12,16 +12,17 @@ class BuildSelection extends StatelessWidget {
   //final String page;
   final Function buttonClicked;
   final List buildList;
+  final String page;
 
   BuildSelection({
-    //required this.page,
+    required this.page,
     required this.buttonClicked,
     required this.buildList,
   });
 
   @override
   Widget build(BuildContext context) {
-    return (buildList.length > 0)
+    return (buildList[0])
         ? GridView.count(
             primary: false,
             padding: const EdgeInsets.all(5),
@@ -33,11 +34,14 @@ class BuildSelection extends StatelessWidget {
               //page,
               //),
               //generating the list of buttons, then calling Buttons to create them, while passing building/room name - reusing code for both
-              ...(buildList).map((bldg) {
+              ...(buildList[1]).map((bldg) {
                 return Buttons(buttonClicked, bldg);
               }).toList()
             ],
           )
-        : VacancyTrack(buttonClicked: buttonClicked, buildList: buildList);
+        : VacancyTrack(
+            roomDetails: buildList[1],
+            page: page,
+          );
   }
 }

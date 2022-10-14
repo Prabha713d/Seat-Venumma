@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
@@ -6,9 +8,9 @@ import 'package:percent_indicator/linear_percent_indicator.dart';
 
 class VacancyIndicator extends StatelessWidget {
   @override
-  final double percentFilled;
+  final List roomDetails;
 
-  VacancyIndicator(this.percentFilled);
+  VacancyIndicator(this.roomDetails);
 
   Widget build(BuildContext context) {
     return Column(children: [
@@ -17,7 +19,7 @@ class VacancyIndicator extends StatelessWidget {
         height: 50,
         margin: EdgeInsets.all(30),
         child: LinearPercentIndicator(
-          percent: percentFilled,
+          percent: roomDetails[0] / roomDetails[1],
           lineHeight: 30,
           animation: true,
           animationDuration: 250,
@@ -28,7 +30,7 @@ class VacancyIndicator extends StatelessWidget {
       Container(
         padding: EdgeInsets.fromLTRB(25, 0, 25, 25),
         child: Text(
-          "40/100",
+          roomDetails[0].toString() + '/' + roomDetails[1].toString(),
           style: TextStyle(
               fontWeight: FontWeight.bold,
               fontSize: 30.0,

@@ -35,13 +35,18 @@ class MyAppState extends State<MyApp> {
   List pageLocator(var page) {
     List returnables = [];
     if (page == 'Seat Venumma') {
-      returnables = obj.buildings;
+      returnables = [true, obj.buildings];
     } else if (page == 'Category Page') {
-      returnables = obj.categories;
+      returnables = [true, obj.categories];
     } else if (obj.inList(obj.categories, page)) {
-      returnables = obj.byCat[page];
+      returnables = [true, obj.byCat[page]];
     } else if (obj.indexFinder(page) >= 0) {
-      returnables = obj.details[obj.indexFinder(page)]['Rooms'] as List;
+      returnables = [
+        true,
+        (obj.details[obj.indexFinder(page)]['Rooms'] as Map).keys.toList()
+      ];
+    } else {
+      returnables = [false, obj.roomDetailSearcher(page)];
     }
 
     return returnables;
@@ -73,6 +78,7 @@ class MyAppState extends State<MyApp> {
           buttonClicked: _buttonClicked,
           //passing the appropriate list of buttons to be created - conditional generation here in case a room has been selected
           buildList: pageLocator(_page),
+          page: _page,
         ),
       ),
     );

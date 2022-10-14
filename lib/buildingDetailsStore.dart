@@ -4,11 +4,11 @@ class BuildingDetailsStore {
   final details = [
     {
       'Name': 'Electrical Sciences Block',
-      'Rooms': [
-        'Foyer',
-        'Food Court',
-        'Gazebo',
-      ],
+      'Rooms': {
+        'Foyer': [10, 100, "12:47"],
+        'Food Court': [10, 100, "12:47"],
+        'Gazebo': [10, 100, "12:47"],
+      },
       'Usage': [
         'Study',
         'Meetings',
@@ -16,14 +16,14 @@ class BuildingDetailsStore {
     },
     {
       'Name': 'Classroom Complex',
-      'Rooms': [
-        'CRC101',
-        'CRC102',
-        'CRC103',
-        'CRC201',
-        'CRC202',
-        'CRC203',
-      ],
+      'Rooms': {
+        'CRC101': [10, 100, "12:47"],
+        'CRC102': [10, 100, "12:47"],
+        'CRC103': [10, 100, "12:47"],
+        'CRC201': [10, 100, "12:47"],
+        'CRC202': [10, 100, "12:47"],
+        'CRC203': [10, 100, "12:47"],
+      },
       'Usage': [
         'Study',
         'Events',
@@ -31,11 +31,11 @@ class BuildingDetailsStore {
     },
     {
       'Name': 'Humanity Sciences Block',
-      'Rooms': [
-        'Gandhi Hall',
-        'Central Lecture Theatre',
-        'HSB133',
-      ],
+      'Rooms': {
+        'Gandhi Hall': [10, 100, "12:47"],
+        'Central Lecture Theatre': [10, 100, "12:47"],
+        'HSB133': [10, 100, "12:47"],
+      },
       'Usage': [
         'Events',
         'Meetings',
@@ -43,12 +43,12 @@ class BuildingDetailsStore {
     },
     {
       'Name': 'Ramanujan Block',
-      'Rooms': [
-        'RJN101',
-        'RJN102',
-        'RJN201',
-        'RJN202',
-      ],
+      'Rooms': {
+        'RJN101': [10, 100, "12:47"],
+        'RJN102': [10, 100, "12:47"],
+        'RJN201': [10, 100, "12:47"],
+        'RJN202': [10, 100, "12:47"],
+      },
       'Usage': [
         'Events',
         'Meetings',
@@ -56,12 +56,12 @@ class BuildingDetailsStore {
     },
     {
       'Name': 'Raman Block',
-      'Rooms': [
-        'RMN101',
-        'RMN102',
-        'RMN201',
-        'RMN202',
-      ],
+      'Rooms': {
+        'RMN101': [10, 100, "12:47"],
+        'RMN102': [10, 100, "12:47"],
+        'RMN201': [10, 100, "12:47"],
+        'RMN202': [10, 100, "12:47"],
+      },
       'Usage': [
         'Events',
         'Meetings',
@@ -69,12 +69,12 @@ class BuildingDetailsStore {
     },
     {
       'Name': 'Central Library',
-      'Rooms': [
-        'Ground Floor',
-        'First Floor',
-        'Second Floor',
-        'Third Floor',
-      ],
+      'Rooms': {
+        'Ground Floor': [10, 100, "12:47"],
+        'First Floor': [10, 100, "12:47"],
+        'Second Floor': [10, 100, "12:47"],
+        'Third Floor': [10, 100, "12:47"],
+      },
       'Usage': [
         'Study',
       ],
@@ -102,6 +102,25 @@ class BuildingDetailsStore {
     return -1;
   }
 
+  List inMap(Map haystack, var needle) {
+    List haystackKeys = haystack.keys.toList();
+    for (int i = 0; i < haystackKeys.length; i++) {
+      if (needle == haystackKeys[i]) {
+        return haystack[needle];
+      }
+    }
+    return [];
+  }
+
+  List roomDetailSearcher(String roomName) {
+    for (int i = 0; i < details.length; i++) {
+      if (inMap(details[i]['Rooms'] as Map, roomName).isNotEmpty) {
+        return (inMap(details[i]['Rooms'] as Map, roomName));
+      }
+    }
+
+    return [];
+  }
   //when an object is created to this class, a bunch of lists are intialized.
   //ideally when the backend is constructed, this code should read from there and generate the same lists.
 

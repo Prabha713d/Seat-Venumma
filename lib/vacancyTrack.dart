@@ -9,13 +9,13 @@ import 'roomDescription.dart';
 
 class VacancyTrack extends StatelessWidget {
   //final String page;
-  final Function buttonClicked;
-  final List buildList;
+  final List roomDetails;
+  final String page;
 
   VacancyTrack({
     //required this.page,
-    required this.buttonClicked,
-    required this.buildList,
+    required this.roomDetails,
+    required this.page,
   });
 
   @override
@@ -24,11 +24,11 @@ class VacancyTrack extends StatelessWidget {
       children: [
         Card(
           elevation: 5,
-          child: VacancyIndicator(0.4),
+          child: VacancyIndicator(roomDetails),
         ),
         Card(
           elevation: 5,
-          child: RoomDescription(timeUpdated: "1251 hrs"),
+          child: RoomDescription(timeUpdated: roomDetails[2]),
         ),
       ],
     );
