@@ -6,13 +6,13 @@ var details = [
         10,
         100,
         DateTime.parse('1969-07-20 20:18:04Z'),
-        ['Charging Ports', 'Board']
+        ['Plug points', 'Board']
       ],
       'Food Court': [
         10,
         100,
         DateTime.parse('1969-07-20 20:18:04Z'),
-        ['Charging Ports']
+        ['Plug points']
       ],
       'Gazebo': [
         10,
@@ -33,37 +33,37 @@ var details = [
         10,
         100,
         DateTime.parse('1969-07-20 20:18:04Z'),
-        ['AC', 'Projectors', 'Charging Ports', 'Board']
+        ['AC', 'Projectors', 'Plug points', 'Board']
       ],
       'CRC102': [
         10,
         100,
         DateTime.parse('1969-07-20 20:18:04Z'),
-        ['AC', 'Projectors', 'Charging Ports', 'Board']
+        ['AC', 'Projectors', 'Plug points', 'Board']
       ],
       'CRC103': [
         10,
         100,
         DateTime.parse('1969-07-20 20:18:04Z'),
-        ['AC', 'Projectors', 'Charging Ports', 'Board']
+        ['AC', 'Projectors', 'Plug points', 'Board']
       ],
       'CRC201': [
         10,
         100,
         DateTime.parse('1969-07-20 20:18:04Z'),
-        ['AC', 'Projectors', 'Charging Ports', 'Board']
+        ['AC', 'Projectors', 'Plug points', 'Board']
       ],
       'CRC202': [
         10,
         100,
         DateTime.parse('1969-07-20 20:18:04Z'),
-        ['AC', 'Projectors', 'Charging Ports', 'Board']
+        ['AC', 'Projectors', 'Plug points', 'Board']
       ],
       'CRC203': [
         10,
         100,
         DateTime.parse('1969-07-20 20:18:04Z'),
-        ['AC', 'Projectors', 'Charging Ports', 'Board']
+        ['AC', 'Projectors', 'Plug points', 'Board']
       ],
     },
     'Usage': [
@@ -90,7 +90,7 @@ var details = [
         10,
         100,
         DateTime.parse('1969-07-20 20:18:04Z'),
-        ['AC', 'Projectors', 'Charging Ports']
+        ['AC', 'Projectors', 'Plug points']
       ],
     },
     'Usage': [
@@ -105,25 +105,25 @@ var details = [
         10,
         100,
         DateTime.parse('1969-07-20 20:18:04Z'),
-        ['AC', 'Projectors', 'Charging Ports', 'Board']
+        ['AC', 'Projectors', 'Plug points', 'Board']
       ],
       'RJN102': [
         10,
         100,
         DateTime.parse('1969-07-20 20:18:04Z'),
-        ['AC', 'Projectors', 'Charging Ports', 'Board']
+        ['AC', 'Projectors', 'Plug points', 'Board']
       ],
       'RJN201': [
         10,
         100,
         DateTime.parse('1969-07-20 20:18:04Z'),
-        ['AC', 'Projectors', 'Charging Ports', 'Board']
+        ['AC', 'Projectors', 'Plug points', 'Board']
       ],
       'RJN202': [
         10,
         100,
         DateTime.parse('1969-07-20 20:18:04Z'),
-        ['AC', 'Projectors', 'Charging Ports', 'Board']
+        ['AC', 'Projectors', 'Plug points', 'Board']
       ],
     },
     'Usage': [
@@ -138,25 +138,25 @@ var details = [
         10,
         100,
         DateTime.parse('1969-07-20 20:18:04Z'),
-        ['AC', 'Projectors', 'Charging Ports', 'Board']
+        ['AC', 'Projectors', 'Plug points', 'Board']
       ],
       'RMN102': [
         10,
         100,
         DateTime.parse('1969-07-20 20:18:04Z'),
-        ['AC', 'Projectors', 'Charging Ports', 'Board']
+        ['AC', 'Projectors', 'Plug points', 'Board']
       ],
       'RMN201': [
         10,
         100,
         DateTime.parse('1969-07-20 20:18:04Z'),
-        ['AC', 'Projectors', 'Charging Ports', 'Board']
+        ['AC', 'Projectors', 'Plug points', 'Board']
       ],
       'RMN202': [
         10,
         100,
         DateTime.parse('1969-07-20 20:18:04Z'),
-        ['AC', 'Projectors', 'Charging Ports', 'Board']
+        ['AC', 'Projectors', 'Plug points', 'Board']
       ],
     },
     'Usage': [
@@ -171,25 +171,25 @@ var details = [
         10,
         100,
         DateTime.parse('1969-07-20 20:18:04Z'),
-        ['AC', 'Charging Ports']
+        ['AC', 'Plug points']
       ],
       'First Floor': [
         10,
         100,
         DateTime.parse('1969-07-20 20:18:04Z'),
-        ['AC', 'Charging Ports']
+        ['AC', 'Plug points']
       ],
       'Second Floor': [
         10,
         100,
         DateTime.parse('1969-07-20 20:18:04Z'),
-        ['AC', 'Charging Ports']
+        ['AC', 'Plug points']
       ],
       'Third Floor': [
         10,
         100,
         DateTime.parse('1969-07-20 20:18:04Z'),
-        ['AC', 'Charging Ports']
+        ['AC', 'Plug points']
       ],
     },
     'Usage': [
