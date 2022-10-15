@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-//Button design
+//Basic button design for the rooms and buildings.
 
 class Buttons extends StatelessWidget {
   //selectHandler is what is run when the button is pressed, which links all the way to the home page.

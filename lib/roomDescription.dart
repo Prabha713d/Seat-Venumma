@@ -3,6 +3,8 @@ import 'package:flutter/src/widgets/framework.dart';
 
 import 'package:flutter/material.dart';
 
+//Meant for room description. Currently for displaying Last Updated
+
 class RoomDescription extends StatelessWidget {
   @override
   final DateTime timeUpdated;

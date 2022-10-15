@@ -1,10 +1,11 @@
-//the class currently storing the data.
+//this is used for some communication and data reading from our "database".
 
 import 'package:flutter/material.dart';
 
 import 'buildingDetails.dart' as bd;
 
 class BuildingDetailsStore {
+  //this map is currenlty not doing anything
   var details = [
     {
       'Name': 'Electrical Sciences Block',
@@ -88,6 +89,7 @@ class BuildingDetailsStore {
   List buildings = [], categories = [];
   var byCat = {};
 
+  //for finding an element in a given list
   bool inList(List haystack, var needle) {
     for (int i = 0; i < haystack.length; i++) {
       if (needle == haystack[i]) {
@@ -97,6 +99,7 @@ class BuildingDetailsStore {
     return false;
   }
 
+  //for finding index of an element
   int indexFinder(var needle) {
     for (int i = 0; i < bd.details.length; i++) {
       if (bd.details[i]['Name'] == needle) {
@@ -106,6 +109,7 @@ class BuildingDetailsStore {
     return -1;
   }
 
+  //some jugaad to find whether some dictionary keys were matching, but pretty important fix.
   List inMap(Map haystack, var needle) {
     List haystackKeys = haystack.keys.toList();
     for (int i = 0; i < haystackKeys.length; i++) {
@@ -116,6 +120,7 @@ class BuildingDetailsStore {
     return [];
   }
 
+  //searches through the map and returns details of a specific room
   List roomDetailSearcher(String roomName) {
     for (int i = 0; i < bd.details.length; i++) {
       if (inMap(bd.details[i]['Rooms'] as Map, roomName).isNotEmpty) {
@@ -127,6 +132,7 @@ class BuildingDetailsStore {
     return [];
   }
 
+  //used to update the details about a particular room. This is used when a room's vacancy is updated.
   void vacancyUpdate(String roomName, int newVacancy) {
     print("reached" + roomName);
     for (int i = 0; i < bd.details.length; i++) {
@@ -144,6 +150,7 @@ class BuildingDetailsStore {
       }
     }
   }
+
   //when an object is created to this class, a bunch of lists are intialized.
   //ideally when the backend is constructed, this code should read from there and generate the same lists.
 

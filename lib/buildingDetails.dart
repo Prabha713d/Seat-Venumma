@@ -1,3 +1,6 @@
+//this is acting as our temporary backend database
+//structure for every element (building) is Name, Rooms (currentCapacity, maxCapacity, lastUpdated, facilities, isBookable, currentBooker), Usage
+
 var details = [
   {
     'Name': 'Electrical Sciences Block',
@@ -6,19 +9,22 @@ var details = [
         10,
         100,
         DateTime.parse('1969-07-20 20:18:04Z'),
-        ['Plug points', 'Board']
+        ['Plug points', 'Board'],
+        false,
       ],
       'Food Court': [
         10,
         100,
         DateTime.parse('1969-07-20 20:18:04Z'),
-        ['Plug points']
+        ['Plug points'],
+        false,
       ],
       'Gazebo': [
         10,
         100,
         DateTime.parse('1969-07-20 20:18:04Z'),
-        ['Board']
+        ['Board'],
+        false,
       ],
     },
     'Usage': [
@@ -33,37 +39,49 @@ var details = [
         10,
         100,
         DateTime.parse('1969-07-20 20:18:04Z'),
-        ['AC', 'Projectors', 'Plug points', 'Board']
+        ['AC', 'Projectors', 'Plug points', 'Board'],
+        true,
+        "No One",
       ],
       'CRC102': [
         10,
         100,
         DateTime.parse('1969-07-20 20:18:04Z'),
-        ['AC', 'Projectors', 'Plug points', 'Board']
+        ['AC', 'Projectors', 'Plug points', 'Board'],
+        true,
+        "No One",
       ],
       'CRC103': [
         10,
         100,
         DateTime.parse('1969-07-20 20:18:04Z'),
-        ['AC', 'Projectors', 'Plug points', 'Board']
+        ['AC', 'Projectors', 'Plug points', 'Board'],
+        true,
+        "No One",
       ],
       'CRC201': [
         10,
         100,
         DateTime.parse('1969-07-20 20:18:04Z'),
-        ['AC', 'Projectors', 'Plug points', 'Board']
+        ['AC', 'Projectors', 'Plug points', 'Board'],
+        true,
+        "Quiz Club",
       ],
       'CRC202': [
         10,
         100,
         DateTime.parse('1969-07-20 20:18:04Z'),
-        ['AC', 'Projectors', 'Plug points', 'Board']
+        ['AC', 'Projectors', 'Plug points', 'Board'],
+        true,
+        "No One",
       ],
       'CRC203': [
         10,
         100,
         DateTime.parse('1969-07-20 20:18:04Z'),
-        ['AC', 'Projectors', 'Plug points', 'Board']
+        ['AC', 'Projectors', 'Plug points', 'Board'],
+        true,
+        "No One",
       ],
     },
     'Usage': [
@@ -78,19 +96,25 @@ var details = [
         10,
         100,
         DateTime.parse('1969-07-20 20:18:04Z'),
-        ['AC', 'Projectors']
+        ['AC', 'Projectors'],
+        true,
+        "No One",
       ],
       'Central Lecture Theatre': [
         10,
         100,
         DateTime.parse('1969-07-20 20:18:04Z'),
-        ['AC', 'Projectors']
+        ['AC', 'Projectors'],
+        true,
+        "Technical Society",
       ],
       'HSB133': [
         10,
         100,
         DateTime.parse('1969-07-20 20:18:04Z'),
-        ['AC', 'Projectors', 'Plug points']
+        ['AC', 'Projectors', 'Plug points'],
+        true,
+        "No One",
       ],
     },
     'Usage': [
@@ -105,25 +129,33 @@ var details = [
         10,
         100,
         DateTime.parse('1969-07-20 20:18:04Z'),
-        ['AC', 'Projectors', 'Plug points', 'Board']
+        ['AC', 'Projectors', 'Plug points', 'Board'],
+        true,
+        "No One",
       ],
       'RJN102': [
         10,
         100,
         DateTime.parse('1969-07-20 20:18:04Z'),
-        ['AC', 'Projectors', 'Plug points', 'Board']
+        ['AC', 'Projectors', 'Plug points', 'Board'],
+        true,
+        "No One",
       ],
       'RJN201': [
         10,
         100,
         DateTime.parse('1969-07-20 20:18:04Z'),
-        ['AC', 'Projectors', 'Plug points', 'Board']
+        ['AC', 'Projectors', 'Plug points', 'Board'],
+        true,
+        "No One",
       ],
       'RJN202': [
         10,
         100,
         DateTime.parse('1969-07-20 20:18:04Z'),
-        ['AC', 'Projectors', 'Plug points', 'Board']
+        ['AC', 'Projectors', 'Plug points', 'Board'],
+        true,
+        "No One",
       ],
     },
     'Usage': [
@@ -138,25 +170,33 @@ var details = [
         10,
         100,
         DateTime.parse('1969-07-20 20:18:04Z'),
-        ['AC', 'Projectors', 'Plug points', 'Board']
+        ['AC', 'Projectors', 'Plug points', 'Board'],
+        true,
+        "No One",
       ],
       'RMN102': [
         10,
         100,
         DateTime.parse('1969-07-20 20:18:04Z'),
-        ['AC', 'Projectors', 'Plug points', 'Board']
+        ['AC', 'Projectors', 'Plug points', 'Board'],
+        true,
+        "No One",
       ],
       'RMN201': [
         10,
         100,
         DateTime.parse('1969-07-20 20:18:04Z'),
-        ['AC', 'Projectors', 'Plug points', 'Board']
+        ['AC', 'Projectors', 'Plug points', 'Board'],
+        true,
+        "No One",
       ],
       'RMN202': [
         10,
         100,
         DateTime.parse('1969-07-20 20:18:04Z'),
-        ['AC', 'Projectors', 'Plug points', 'Board']
+        ['AC', 'Projectors', 'Plug points', 'Board'],
+        true,
+        "No One",
       ],
     },
     'Usage': [
@@ -171,25 +211,29 @@ var details = [
         10,
         100,
         DateTime.parse('1969-07-20 20:18:04Z'),
-        ['AC', 'Plug points']
+        ['AC', 'Plug points'],
+        false,
       ],
       'First Floor': [
         10,
         100,
         DateTime.parse('1969-07-20 20:18:04Z'),
-        ['AC', 'Plug points']
+        ['AC', 'Plug points'],
+        false,
       ],
       'Second Floor': [
         10,
         100,
         DateTime.parse('1969-07-20 20:18:04Z'),
-        ['AC', 'Plug points']
+        ['AC', 'Plug points'],
+        false,
       ],
       'Third Floor': [
         10,
         100,
         DateTime.parse('1969-07-20 20:18:04Z'),
-        ['AC', 'Plug points']
+        ['AC', 'Plug points'],
+        false,
       ],
     },
     'Usage': [

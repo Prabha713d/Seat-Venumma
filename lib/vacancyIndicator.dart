@@ -6,6 +6,8 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/material.dart';
 import 'package:percent_indicator/linear_percent_indicator.dart';
 
+//Generates the vacancy indicator bar and the text shwoing maximum and current seating.
+
 class VacancyIndicator extends StatelessWidget {
   @override
   final List roomDetails;

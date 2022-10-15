@@ -3,6 +3,8 @@ import 'package:flutter/src/widgets/framework.dart';
 
 import 'package:flutter/material.dart';
 
+//brute force creation of tags for the features available in a room based on entries in the "database"
+
 class RoomFeatures extends StatelessWidget {
   @override
   final List features;

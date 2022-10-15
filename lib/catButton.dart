@@ -3,6 +3,8 @@ import 'package:flutter/src/widgets/framework.dart';
 
 import 'package:flutter/material.dart';
 
+//generates the categories icon at the top (menu)
+
 class CatButton extends StatelessWidget {
   @override
   final Function buttonClicked;

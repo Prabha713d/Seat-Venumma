@@ -3,6 +3,8 @@ import 'package:flutter/src/widgets/framework.dart';
 
 import 'package:flutter/material.dart';
 
+//redundant file. Just use it for references and copying.
+
 class Locations extends StatelessWidget {
   final String locationProps;
 

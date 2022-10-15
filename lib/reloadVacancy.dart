@@ -6,6 +6,8 @@ import 'package:testapp/vacancyTrack.dart';
 
 import 'buildingDetailsStore.dart';
 
+//redundant code. used to generate a refresh button before i figured out the actual fit. Leaving the file here in case we need a button in the future.
+
 class ReloadVacancy extends StatelessWidget {
   @override
   final Function reload;
